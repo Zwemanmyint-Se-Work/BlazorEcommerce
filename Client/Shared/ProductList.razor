@@ -1,0 +1,55 @@
+﻿<ul class="list-unstyled">
+    @foreach (var product in Products)
+    {
+        <li class="media my-3">
+            <div class="media-img-wrapper mr-2">
+                <a href="#">
+                    <img class="media-img " src="@product.imageUrl" alt="@product.title"/>
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="#">
+                    <h4 class="mb-0"> @product.title</h4>
+                   
+                </a>
+                <p>@product.description</p>
+                <br/>
+                <h1 class="price"> $@product.price</h1>
+            </div>
+        </li>
+    }
+</ul>
+
+@code {
+
+    private static List<Product> Products = new List<Product> { 
+
+
+    new Product
+    {
+        id = 1,
+        description = "The PlayStation 5 (PS5) is a home video game console developed by Sony Interactive Entertainment. It was announced as the successor to the PlayStation 4 in April 2019, was launched on November 12, 2020, in Australia, Japan, New Zealand, North America, and South Korea, and was released worldwide one week later. The PS5 is part of the ninth generation of video game consoles, along with Microsoft's Xbox Series X/S consoles, which were released in the same month.",
+        imageUrl = "https://upload.wikimedia.org/wikipedia/commons/7/77/Black_and_white_Playstation_5_base_edition_with_controller.png",
+        price = 500.99m,
+        title = "Playstation 5"
+    },
+    new Product
+    {
+        id = 2,
+        description = "The Nintendo Switch[m] is a video game console developed by Nintendo and released worldwide in most regions on March 3, 2017. The console itself is a tablet that can either be docked for home console use or used as a portable device, making it a hybrid console. Its wireless Joy-Con controllers, with standard buttons and directional analog sticks for user input, motion sensing, and tactile feedback, can attach to both sides of the console to support handheld-style play.",
+        imageUrl = "https://upload.wikimedia.org/wikipedia/commons/8/88/Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg",
+        price = 300.99m,
+        title = "Nintendo Switch"
+    },
+    new Product
+    {
+        id = 3,
+        description = "The Xbox Series X and Xbox Series S are, collectively, the fourth generation of the Xbox series of home video game consoles developed and sold by Microsoft. Released on November 10, 2020, the higher-end Xbox Series X and lower-end Xbox Series S are part of the ninth generation of video game consoles, which also includes Sony's PlayStation 5, released the same month.",
+        imageUrl = "https://upload.wikimedia.org/wikipedia/commons/1/12/Xbox_Series_X_2.jpg",
+        price = 499.99m,
+        title = "Xbox Series X"
+    }
+
+};
+
+}
